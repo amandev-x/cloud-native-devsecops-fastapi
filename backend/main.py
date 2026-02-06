@@ -1,5 +1,5 @@
 from fastapi import FastAPI 
-from backend.api import router
+from api import router
 
 app = FastAPI(
     title="Cloud Native DevSecops FastAPI"
