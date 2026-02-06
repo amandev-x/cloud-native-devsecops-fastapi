@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException, status
-from backend.models import Task, TaskResponse
+from models import Task, TaskResponse
 from typing import List
 router = APIRouter()
 
@@ -12,7 +12,7 @@ task_db = {
 }
 @router.get("/tasks")
 async def get_tasks():
-    return List(task_db.values())
+    return list(task_db.values())
 
 @router.get("/tasks/{task_id}")
 async def get_task_by_id(task_id: int):
